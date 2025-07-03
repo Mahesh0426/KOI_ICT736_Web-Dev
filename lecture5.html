@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ICT726 - Week 5: jQuery & AJAX</title>
+  </head>
+  <body>
+    <header>
+      <h1>ICT726 Web Development</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lecture1.html" target="_blank">Lecture 1</a></li>
+        <li><a href="lecture2.html" target="_blank">Lecture 2</a></li>
+        <li><a href="lecture3.html" target="_blank">Lecture 3</a></li>
+        <li><a href="lecture4.html" target="_blank">Lecture 4</a></li>
+        <li><a href="lecture5.html" target="_blank">Lecture 5</a></li>
+        <li><a href="lab1.html" target="_blank">Lab 1</a></li>
+      </ul>
+    </nav>
+
+    <article>
+      <h2>Week 5: Extending JavaScript with jQuery & AJAX</h2>
+
+      <section>
+        <h3>jQuery Fundamentals</h3>
+        <p>
+          <strong>Why jQuery?</strong> Simplifies DOM manipulation and event
+          handling.
+        </p>
+
+        <table border="1" cellpadding="10" cellspacing="0">
+          <tr>
+            <th>Vanilla JavaScript</th>
+            <th>jQuery Equivalent</th>
+          </tr>
+          <tr>
+            <td><code>document.querySelector('.class')</code></td>
+            <td><code>$('.class')</code></td>
+          </tr>
+          <tr>
+            <td><code>element.addEventListener('click', fn)</code></td>
+            <td><code>$(element).click(fn)</code></td>
+          </tr>
+          <tr>
+            <td><code>element.innerHTML = 'text'</code></td>
+            <td><code>$(element).html('text')</code></td>
+          </tr>
+        </table>
+
+        <p><strong>Including jQuery:</strong></p>
+        <pre><code>&lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;</code></pre>
+      </section>
+
+      <section>
+        <h3>Common jQuery Methods</h3>
+        <ul>
+          <li>
+            <strong>Selectors:</strong> <code>$('p')</code>,
+            <code>$('#id')</code>, <code>$('.class')</code>
+          </li>
+          <li>
+            <strong>Events:</strong> <code>.click()</code>,
+            <code>.hover()</code>, <code>.on()</code>
+          </li>
+          <li>
+            <strong>Effects:</strong> <code>.hide()</code>,
+            <code>.show()</code>, <code>.fadeIn()</code>
+          </li>
+          <li>
+            <strong>DOM Manipulation:</strong> <code>.html()</code>,
+            <code>.text()</code>, <code>.append()</code>
+          </li>
+        </ul>
+
+        <pre><code>// Example: Click handler with fade effect
+$('#myButton').click(function() {
+    $('#message').fadeIn().html('Button clicked!');
+});</code></pre>
+      </section>
+
+      <section>
+        <h3>AJAX Concepts</h3>
+        <p>
+          <strong>Asynchronous JavaScript And XML:</strong> Load data without
+          page refresh.
+        </p>
+
+        <p><strong>jQuery AJAX Methods:</strong></p>
+        <ol>
+          <li><code>$.ajax()</code> - Full-featured method</li>
+          <li><code>$.get()</code> - Simplified GET request</li>
+          <li><code>$.post()</code> - Simplified POST request</li>
+          <li><code>$.load()</code> - Load HTML fragment</li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>AJAX Implementation</h3>
+        <pre><code>// Basic AJAX request
+$.ajax({
+    url: 'api/data',
+    method: 'GET',
+    success: function(response) {
+        $('#result').html(response);
+    },
+    error: function(xhr, status, error) {
+        console.error(error);
+    }
+});
+
+// Shorthand GET request
+$.get('api/data', function(data) {
+    console.log(data);
+});</code></pre>
+
+        <p><strong>Response Formats:</strong></p>
+        <ul>
+          <li>JSON (most common)</li>
+          <li>HTML fragments</li>
+          <li>Plain text</li>
+        </ul>
+      </section>
+
+      <br />
+      <br />
+      <h3>AJAX workflow diagram showing client-server communication</h3>
+      <figure>
+        <img
+          src="https://www.researchgate.net/publication/326668286/figure/fig2/AS:653242497265664@1532756556622/Ajax-data-flow-Fig-2-also-shows-a-web-client-search-using-a-search-box-on-a-webpage.png"
+          alt="AJAX workflow diagram showing client-server communication"
+          title="AJAX Communication Flow"
+          width="700"
+          height="300"
+        />
+        <figcaption>
+          Source:
+          <a href="https://images.app.goo.gl/3y4oGwSZPf4nvP469" target="_blank"
+            >click me</a
+          >
+        </figcaption>
+      </figure>
+    </article>
+
+    <footer>
+      <p>Copyright &copy; 2025 Web dev course</p>
+    </footer>
+  </body>
+</html>

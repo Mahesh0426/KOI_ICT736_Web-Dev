@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ICT726 - Lecture 4: JavaScript Fundamentals & DOM</title>
+    <!-- HTML comment: This page covers JavaScript basics and DOM manipulation -->
+  </head>
+  <body>
+    <header>
+      <h1>ICT726 Web Development</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lecture1.html" target="_blank">Lecture 1</a></li>
+        <li><a href="lecture2.html" target="_blank">Lecture 2</a></li>
+        <li><a href="lecture3.html" target="_blank">Lecture 3</a></li>
+        <li><a href="lecture4.html" target="_blank">Lecture 4</a></li>
+        <li><a href="lecture5.html" target="_blank">Lecture 5</a></li>
+        <li><a href="lab1.html" target="_blank">Lab 1</a></li>
+      </ul>
+    </nav>
+
+    <article>
+      <h2>Lecture 4: JavaScript Fundamentals & DOM</h2>
+
+      <section>
+        <h3>JavaScript Basics</h3>
+        <p><strong>Core concepts:</strong></p>
+        <ul>
+          <li>
+            <strong>Variables:</strong> <code>let</code>, <code>const</code>,
+            <code>var</code>
+          </li>
+          <li>
+            <strong>Data Types:</strong> String, Number, Boolean, Array, Object
+          </li>
+          <li><strong>Operators:</strong> Arithmetic, Comparison, Logical</li>
+          <li><strong>Functions:</strong> Declarations vs Expressions</li>
+        </ul>
+        <br />
+
+        <pre><code>// Variable examples
+let message = "Hello World";
+const PI = 3.14;
+
+// Function example
+function greet(name) {
+    return `Hello, ${name}!`;
+}</code></pre>
+        <br />
+      </section>
+
+      <section>
+        <h3>DOM Manipulation</h3>
+        <p>
+          <strong>Document Object Model (DOM):</strong> Tree representation of
+          HTML
+        </p>
+
+        <table border="1" cellpadding="10" cellspacing="0">
+          <tr>
+            <th>Method</th>
+            <th>Description</th>
+            <th>Example</th>
+          </tr>
+          <tr>
+            <td><code>getElementById()</code></td>
+            <td>Selects element by ID</td>
+            <td><code>document.getElementById('header')</code></td>
+          </tr>
+          <tr>
+            <td><code>querySelector()</code></td>
+            <td>Selects first matching element</td>
+            <td><code>document.querySelector('.btn')</code></td>
+          </tr>
+          <tr>
+            <td><code>addEventListener()</code></td>
+            <td>Attaches event handler</td>
+            <td><code>button.addEventListener('click', handler)</code></td>
+          </tr>
+        </table>
+      </section>
+
+      <section>
+        <h3>Common DOM Operations</h3>
+        <pre><code>// Changing content
+document.getElementById('demo').innerHTML = "New content";
+
+// Changing styles
+element.style.color = "blue";
+
+// Creating elements
+const newPara = document.createElement("p");
+newPara.textContent = "This is new!";
+document.body.appendChild(newPara);
+
+// Event handling
+document.getElementById("myBtn").addEventListener("click", function() {
+    alert("Button clicked!");
+});</code></pre>
+      </section>
+
+      <section>
+        <h3>JavaScript in HTML</h3>
+        <p><strong>Implementation methods:</strong></p>
+        <ol>
+          <li>
+            <strong>Inline:</strong>
+            <pre><code>&lt;button onclick="alert('Clicked!')"&gt;Click me&lt;/button&gt;</code></pre>
+          </li>
+          <li>
+            <strong>Internal:</strong>
+            <pre><code>&lt;script&gt;
+    // JavaScript code here
+&lt;/script&gt;</code></pre>
+          </li>
+          <li>
+            <strong>External:</strong>
+            <pre><code>&lt;script src="script.js"&gt;&lt;/script&gt;</code></pre>
+          </li>
+        </ol>
+      </section>
+      <br />
+      <br />
+
+      <h3>DOM Tree Structure Diagram</h3>
+      <figure>
+        <img
+          src="https://www.w3schools.com/js/pic_htmltree.gif"
+          alt="DOM Tree Structure Diagram"
+          title="DOM Tree Representation"
+        />
+        <figcaption>
+          Source:
+          <a
+            href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.w3schools.com%2Fjs%2Fjs_htmldom.asp&psig=AOvVaw3Ik_-XJJo_KADO5NcAz8vK&ust=1751596970698000&source=images&cd=vfe&opi=89978449&ved=0CBYQjRxqFwoTCKDTybPVn44DFQAAAAAdAAAAABAK"
+            target="_blank"
+            >click here</a
+          >
+        </figcaption>
+      </figure>
+    </article>
+
+    <footer>
+      <p>Copyright &copy; 2025 Web dev course</p>
+    </footer>
+  </body>
+</html>

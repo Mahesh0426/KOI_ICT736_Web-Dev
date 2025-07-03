@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ICT726 - Lecture 2: Cascading Style Sheets (CSS)</title>
+  </head>
+  <body>
+    <header>
+      <h1>ICT726 Web Development</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lecture1.html" target="_blank">Lecture 1</a></li>
+        <li><a href="lecture2.html" target="_blank">Lecture 2</a></li>
+        <li><a href="lecture3.html" target="_blank">Lecture 3</a></li>
+        <li><a href="lecture4.html" target="_blank">Lecture 4</a></li>
+        <li><a href="lecture5.html" target="_blank">Lecture 5</a></li>
+        <li><a href="lab1.html" target="_blank">Lab 1</a></li>
+      </ul>
+    </nav>
+
+    <article>
+      <h2>Lecture 2: Cascading Style Sheets (CSS)</h2>
+
+      <section>
+        <h3>What is CSS?</h3>
+        <p>
+          <strong>CSS (Cascading Style Sheets)</strong> controls the visual
+          presentation of HTML documents.
+        </p>
+        <ul>
+          <li>Separates content (HTML) from design (CSS)</li>
+          <li>Uses <strong>selectors</strong> to target HTML elements</li>
+          <li>
+            Follows <strong>cascade</strong> (priority rules) and
+            <strong>inheritance</strong>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>CSS Syntax</h3>
+        <pre><code>selector {
+    property: value;
+    /* Example */
+    color: blue;
+    font-size: 16px;
+}</code></pre>
+        <p><strong>The foundational concepts of CSS:</strong></p>
+        <ol>
+          <li>
+            <strong>Selector</strong> (e.g., <code>h1</code>,
+            <code>.class</code>, <code>#id</code>)
+          </li>
+          <li>
+            <strong>Property</strong> (e.g., <code>color</code>,
+            <code>margin</code>)
+          </li>
+          <li>
+            <strong>Value</strong> (e.g., <code>red</code>, <code>20px</code>)
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>CSS Selectors</h3>
+        <table border="1" cellpadding="10" cellspacing="0">
+          <tr>
+            <th>Selector Type</th>
+            <th>Example</th>
+            <th>Targets</th>
+          </tr>
+          <tr>
+            <td>Element</td>
+            <td><code>p</code></td>
+            <td>All <code>&lt;p&gt;</code> tags</td>
+          </tr>
+          <tr>
+            <td>Class</td>
+            <td><code>.highlight</code></td>
+            <td>Elements with <code>class="highlight"</code></td>
+          </tr>
+          <tr>
+            <td>ID</td>
+            <td><code>#header</code></td>
+            <td>Element with <code>id="header"</code></td>
+          </tr>
+        </table>
+      </section>
+
+      <section>
+        <h3>Box Model</h3>
+        <p>Every HTML element is a rectangular box with:</p>
+        <ul>
+          <li><strong>Content</strong> (text/images)</li>
+          <li><strong>Padding</strong> (space inside border)</li>
+          <li><strong>Border</strong> (edge around padding)</li>
+          <li><strong>Margin</strong> (space outside border)</li>
+        </ul>
+        <pre><code>div {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 10px;
+}</code></pre>
+      </section>
+
+      <section>
+        <h3>Types of CSS Syntax</h3>
+        <ol>
+          <li>
+            <strong>Inline CSS</strong> (within HTML tags):
+            <pre><code>&lt;p style="color: red;"&gt;Text&lt;/p&gt;</code></pre>
+          </li>
+          <li>
+            <strong>Internal CSS</strong> (in <code>&lt;style&gt;</code> tag):
+            <pre><code>&lt;style&gt;
+    p { color: blue; }
+&lt;/style&gt;</code></pre>
+          </li>
+          <li>
+            <strong>External CSS</strong> (separate .css file):
+            <pre><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></pre>
+          </li>
+        </ol>
+      </section>
+
+      <figure>
+        <img
+          src="https://media.geeksforgeeks.org/wp-content/uploads/20241210112354236207/Screenshot-2024-12-10-105714.png"
+          alt="CSS Box Model Diagram"
+          title="CSS Box Model"
+        />
+        <figcaption>
+          Source:
+          <a href="https://images.app.goo.gl/FaPxFXrBEn2cxfcX8" target="_blank"
+            >click here</a
+          >
+        </figcaption>
+      </figure>
+    </article>
+
+    <br />
+    <br />
+    <footer>
+      <p>Copyright &copy; 2025 Web dev course</p>
+    </footer>
+  </body>
+</html>

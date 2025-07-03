@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ICT726 - Lab 1: HTML Fundamentals</title>
+    <!-- HTML comment: This page documents my Lab 1 work on HTML basics -->
+  </head>
+  <body>
+    <header>
+      <h1>ICT726 Web Development</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lecture1.html" target="_blank">Lecture 1</a></li>
+        <li><a href="lecture2.html" target="_blank">Lecture 2</a></li>
+        <li><a href="lecture3.html" target="_blank">Lecture 3</a></li>
+        <li><a href="lecture4.html" target="_blank">Lecture 4</a></li>
+        <li><a href="lecture5.html" target="_blank">Lecture 5</a></li>
+        <li><a href="lab1.html" target="_blank">Lab 1</a></li>
+      </ul>
+    </nav>
+    <article>
+      <h2>Lab 1: HTML Fundamentals</h2>
+
+      <section>
+        <h3>Lab Objectives</h3>
+        <ol>
+          <li>Create valid HTML5 documents</li>
+          <li>Implement semantic markup</li>
+          <li>Build a multi-page website structure</li>
+          <li>Validate code using W3C validator</li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>Tasks Completed</h3>
+        <ul>
+          <li>
+            <strong>Created 6 HTML pages:</strong>
+            <ul>
+              <li>5 lecture summary pages</li>
+              <li>1 lab documentation page</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Implemented semantic structure:</strong>
+            <ul>
+              <li>
+                Used <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>,
+                <code>&lt;article&gt;</code>, <code>&lt;footer&gt;</code>
+              </li>
+              <li>
+                Proper heading hierarchy (<code>h1</code>-<code>h3</code>)
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Added accessibility features:</strong>
+            <ul>
+              <li>Alt text for all images</li>
+              <li>Logical tab order</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Code Example</h3>
+        <p><strong>Navigation implementation:</strong></p>
+        <pre><code>&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="lecture1.html"&gt;Lecture 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="lecture2.html"&gt;Lecture 2&lt;/a&gt;&lt;/li&gt;
+        &lt;!-- Additional links --&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+      </section>
+
+      <section>
+        <h3>Challenges & Solutions</h3>
+        <table border="1" cellpadding="10" cellspacing="0">
+          <tr>
+            <th>Challenge</th>
+            <th>Solution</th>
+          </tr>
+          <tr>
+            <td>HTML validation errors</td>
+            <td>Used W3C validator to identify and fix unclosed tags</td>
+          </tr>
+          <tr>
+            <td>Image sizing issues</td>
+            <td>
+              Added width/height attributes while maintaining aspect ratio
+            </td>
+          </tr>
+          <tr>
+            <td>Navigation consistency</td>
+            <td>Created template and copied to all pages</td>
+          </tr>
+        </table>
+      </section>
+
+      <table>
+        <th>
+          <section>
+            <h3>Validation Report</h3>
+            <p>All pages pass W3C HTML validation with:</p>
+            <ul>
+              <li>No errors</li>
+              <li>Minor warnings about section heading hierarchy</li>
+              <li>
+                Verified using
+                <a href="https://validator.w3.org/" target="_blank"
+                  >validator.w3.org</a
+                >
+              </li>
+            </ul>
+          </section>
+        </th>
+        <th>
+          <figure>
+            <img
+              src="https://static.webplatform.org/2/2b/html_validation_errors.png"
+              alt="Screenshot of W3C HTML validation results showing no errors"
+              title="HTML Validation Results"
+              width="600"
+              height="400"
+            />
+            <figcaption>
+              Source:
+              <a
+                href="https://images.app.goo.gl/JgBY1e7i1rAeD4u88"
+                target="_blank"
+                >click here</a
+              >
+            </figcaption>
+          </figure>
+        </th>
+      </table>
+    </article>
+
+    <footer>
+      <p>
+        <small>Copyright &copy; 2024 ICT726 Student | Lab 1 Submission</small>
+      </p>
+    </footer>
+  </body>
+</html>

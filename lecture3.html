@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ICT726 - Lecture 3: Ethical Web Principles & Accessibility</title>
+  </head>
+  <body>
+    <header>
+      <h1>ICT726 Web Development</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lecture1.html" target="_blank">Lecture 1</a></li>
+        <li><a href="lecture2.html" target="_blank">Lecture 2</a></li>
+        <li><a href="lecture3.html" target="_blank">Lecture 3</a></li>
+        <li><a href="lecture4.html" target="_blank">Lecture 4</a></li>
+        <li><a href="lecture5.html" target="_blank">Lecture 5</a></li>
+        <li><a href="lab1.html" target="_blank">Lab 1</a></li>
+      </ul>
+    </nav>
+
+    <article>
+      <h2>Lecture 3: Ethical Web Principles & Accessibility</h2>
+
+      <section>
+        <h3>Web Ethics Fundamentals</h3>
+        <p><strong>Core principles for ethical web development:</strong></p>
+        <ul>
+          <li>
+            <strong>Privacy:</strong> Protect user data (GDPR, COPPA compliance)
+          </li>
+          <li>
+            <strong>Transparency:</strong> Disclose data collection practices
+          </li>
+          <li><strong>Inclusivity:</strong> Design for diverse audiences</li>
+          <li>
+            <strong>Sustainability:</strong> Optimize for energy efficiency
+          </li>
+          <li><strong>Honesty:</strong> Avoid dark patterns (misleading UI)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Web Accessibility (WCAG)</h3>
+        <p><strong>WCAG 2.1 Guidelines (POUR principles):</strong></p>
+        <ol type="i">
+          <li>
+            <strong>Perceivable:</strong>
+            <ul>
+              <li>Text alternatives for non-text content</li>
+              <li>Captions for multimedia</li>
+              <li>Contrast ratio ≥ 4.5:1 for normal text</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Operable:</strong>
+            <ul>
+              <li>Keyboard navigable interfaces</li>
+              <li>No content that causes seizures (≤3 flashes/sec)</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Understandable:</strong>
+            <ul>
+              <li>Clear error messages in forms</li>
+              <li>Consistent navigation</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Robust:</strong>
+            <ul>
+              <li>Compatible with assistive technologies</li>
+              <li>Valid HTML/CSS</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>Implementing Accessibility</h3>
+        <p><strong>Key HTML5 techniques:</strong></p>
+        <pre><code>&lt;!-- Semantic HTML --&gt;
+&lt;nav aria-label="Main navigation"&gt;...&lt;/nav&gt;
+
+&lt;!-- ARIA attributes --&gt;
+&lt;button aria-expanded="false"&gt;Menu&lt;/button&gt;
+
+&lt;!-- Alt text best practice --&gt;
+&lt;img src="chart.jpg" alt="Sales growth chart: 15% increase Q1 2024"&gt;</code></pre>
+
+        <table border="1" cellpadding="10" cellspacing="0">
+          <tr>
+            <th>SN</th>
+            <th>Tool</th>
+            <th>Purpose</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>WAVE</td>
+            <td>Accessibility evaluation tool</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>axe DevTools</td>
+            <td>Browser extension for testing</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>NVDA</td>
+            <td>Screen reader for testing</td>
+          </tr>
+        </table>
+      </section>
+
+      <section>
+        <h3>Ethical Dilemmas in Web Dev</h3>
+        <p><strong>Common challenges:</strong></p>
+        <ul>
+          <li>
+            <strong>Cookie Consent:</strong> Balancing usability vs. compliance
+          </li>
+          <li>
+            <strong>Algorithmic Bias:</strong> Ensuring AI doesn't discriminate
+          </li>
+          <li>
+            <strong>Environmental Impact:</strong> Reducing carbon footprint of
+            websites
+          </li>
+          <li><strong>Open Source:</strong> Proper attribution of code</li>
+        </ul>
+      </section>
+
+      <figure>
+        <img
+          src="https://us.123rf.com/450wm/rawpixel/rawpixel1706/rawpixel170610961/79701220-group-of-diverse-people-using-digital-devices.jpg?ver=6"
+          alt="Diverse group using devices with accessibility features"
+          title="Web Accessibility in Practice"
+        />
+        <figcaption>
+          Source:
+          <a href="https://images.app.goo.gl/z8JtLV5L2XiN9Lew8" target="_blank"
+            >click here</a
+          >
+        </figcaption>
+      </figure>
+    </article>
+
+    <footer>
+      <p>Copyright &copy; 2025 Web dev course</p>
+    </footer>
+  </body>
+</html>
