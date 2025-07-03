@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alex's Portfolio</title>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <table>
+        <tr>
+          <td><h1>Alex Developer</h1></td>
+          <td><p>Web Developer & Designer</p></td>
+        </tr>
+      </table>
+
+      <!-- Navigation Bar -->
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#blog">Blog</a>
+        <a href="#media">Media</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <img
+        src="./assets/pp.png"
+        width="200"
+        height="250"
+        alt="Alex's profile picture"
+      />
+      <p>
+        Hi, I'm Alex, a passionate web developer with expertise in HTML, CSS,
+        and JavaScript. I love creating beautiful and functional websites that
+        provide great user experiences. I have worked on various projects
+        ranging from simple landing pages to complex web applications.
+      </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2>My Projects</h2>
+
+      <!-- Project 1 (Using <details> tag) -->
+      <details>
+        <summary>E-Commerce Website</summary>
+        <img
+          src="./assets/ecom.png"
+          width="400"
+          height="200"
+          alt="E-Commerce Website"
+        />
+        <p>An online store built with React and Node.js.</p>
+      </details>
+
+      <!-- Project 2 -->
+      <details>
+        <summary>Portfolio Template</summary>
+        <img
+          src="./assets/portfolio.jpg"
+          width="400"
+          height="200"
+          alt="Portfolio Template"
+        />
+        <p>A responsive portfolio template using HTML5 and CSS3.</p>
+      </details>
+
+      <!-- Project 3 -->
+      <details>
+        <summary>Blog Platform</summary>
+        <img
+          src="./assets/blog.jpeg"
+          width="400"
+          height="200"
+          alt="Blog Platform"
+        />
+        <p>A CMS-based blog with user authentication.</p>
+      </details>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2>My Skills</h2>
+      <table border="1" cellpadding="10" cellspacing="0">
+        <tr>
+          <th>Skill</th>
+          <th>Proficiency</th>
+        </tr>
+        <tr>
+          <td>HTML5</td>
+          <td>Advanced</td>
+        </tr>
+        <tr>
+          <td>CSS3</td>
+          <td>Advanced</td>
+        </tr>
+        <tr>
+          <td>JavaScript</td>
+          <td>Intermediate</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog">
+      <h2>Blog</h2>
+      <article>
+        <h3>1.Why Semantic HTML Matters</h3>
+        <p>
+          Semantic HTML improves accessibility and SEO... <button>Read</button>
+        </p>
+      </article>
+      <article>
+        <h3>2. Getting Started with CSS Grid</h3>
+        <p>CSS Grid simplifies responsive layouts... <button>Read</button></p>
+      </article>
+    </section>
+
+    <!-- Media Section -->
+    <section id="media">
+      <h2>Media</h2>
+      <video controls width="300" height="200">
+        <source src="./assets/video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <audio controls>
+        <source src="./assets/voice.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+        <br />
+        <br />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+        <br />
+        <br />
+
+        <label for="message">Message:</label>
+        <textarea id="message" required></textarea>
+        <br />
+        <br />
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2025 Alex Developer. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
