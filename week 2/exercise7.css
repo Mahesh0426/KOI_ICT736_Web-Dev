@@ -1,0 +1,41 @@
+/* Background Image Styles */
+body {
+  background-image: url("images/SQUARE/float3.jpg");
+  background-repeat: repeat-y;
+
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+header {
+  background-color: #213643;
+  color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Navigation Styles */
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #f5f5f5;
+  margin-top: 20px;
+}

@@ -1,0 +1,92 @@
+header,
+footer {
+  color: white;
+  background-color: #213643;
+}
+nav {
+  background-color: #728b96;
+}
+article {
+  border: solid 1pt #ed8030;
+}
+h1,
+h2,
+h3 {
+  font-family: "Trebuchet MS", "Lucida Grande", Tahoma, sans-serif;
+}
+body {
+  font-family: Georgia, Cambria, "Times New Roman", serif;
+}
+
+/* ID Selector */
+#reviews {
+  border-bottom: solid 3pt #213643;
+  color: #ed8030;
+}
+
+/* Class Selector */
+.first {
+  color: #728896;
+  font-style: italic;
+}
+
+/* Attribute Selector */
+[title] {
+  cursor: help;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 2px dotted blue;
+}
+
+/* Attribute Selector with exact value */
+[title="Central Park"] {
+  color: #ed8030;
+  font-weight: bold;
+}
+
+/* Pseudo-classes */
+a:link { 
+    font-weight: bold; 
+    color: #47B3D7; 
+    text-decoration: none; 
+}
+a:visited { 
+    color: #BB78FF; 
+}
+a:hover { 
+    background-color: #FFFF99;
+    text-decoration: underline; 
+}
+a:active { 
+    color: #FF0000; 
+}
+
+
+nav {
+    background-color: #728896; 
+    padding: 0.25em; 
+    border-radius: 5px; 
+}
+
+nav ul {
+    margin: 0; 
+    padding: 0; 
+    text-align: center; 
+}
+
+nav ul li {
+    list-style: none; 
+    display: inline; 
+    margin: 0 1em; 
+}
+
+nav a {
+    padding: 0.25em 0.5em; 
+    color: white; 
+    transition: background-color 0.3s; /
+}
+
+nav a:hover {
+    background-color: #213643; 
+    border-radius: 3px; 
+}

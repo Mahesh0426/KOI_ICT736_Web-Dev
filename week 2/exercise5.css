@@ -1,0 +1,31 @@
+body,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+section {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Floating image containers */
+div.floating {
+  float: left;
+  margin: 15px;
+  text-align: center;
+  background: #f5f5f5;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Center align captions */
+div.floating p {
+  text-align: center;
+  margin-top: 8px;
+  font-weight: bold;
+}
