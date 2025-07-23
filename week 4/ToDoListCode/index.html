@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern To-Do</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="card">
+      <h1>My Tasks</h1>
+
+      <div class="input-group">
+        <input
+          id="taskInput"
+          type="text"
+          placeholder="Add a new task …"
+          maxlength="60"
+        />
+        <button id="addBtn">＋</button>
+      </div>
+
+      <ul id="taskList"></ul>
+
+      <footer>
+        <span id="counter">0 left</span>
+        <button id="clearBtn" hidden>Clear completed</button>
+      </footer>
+    </main>
+    <script src="todo.js"></script>
+  </body>
+</html>

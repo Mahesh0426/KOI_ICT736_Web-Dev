@@ -1,0 +1,61 @@
+<!-- Purpose of the Original Code
+The original code is a password confirmation validator. It:
+ -Takes two password inputs from a form
+ -Compares them to ensure they match
+ -Returns true if they match (allowing form submission)
+ -Shows an alert and returns false if they don't match (preventing form submission) -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <h2>Login Form</h2>
+      <form name="loginForm" action="#" onsubmit="return validateLogin()">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" /><br />
+        <br />
+
+        <label for=" password"> Password:</label>
+        <input type="password" name="password" id="password" /><br />
+
+        <button type="submit">Login</button> <br />
+      </form>
+
+      <p>Note: Valid credentials are "admin" and "Secure123"</p>
+    </div>
+
+    <script>
+      // Predefined valid credentials
+      const validUsername = "admin";
+      const validPassword = "Secure123";
+
+      function validateLogin() {
+        // Get form values with querySelector
+        const username = document.querySelector("#username").value;
+        const password = document.querySelector("#password").value;
+
+        // Validate username
+        if (username !== validUsername) {
+          alert("Invalid username");
+          return false;
+        }
+
+        // Validate password
+        if (password !== validPassword) {
+          alert("Invalid password");
+          return false;
+        }
+
+        // If validation passes
+        alert("Login successful!");
+        return true;
+      }
+    </script>
+  </body>
+</html>

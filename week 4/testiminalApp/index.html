@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testimonial Wall</title>
+
+    <!-- Font-Awesome for stars -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>✍️ Add a Testimonial</h1>
+
+    <!-- ===== FORM ===== -->
+    <form class="form-card" id="testForm">
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" placeholder="John Doe" required />
+
+      <label for="testimonial">Testimonial</label>
+      <input
+        type="text"
+        id="testimonial"
+        placeholder="Tell us what you think…"
+        required
+      />
+
+      <label for="rating">Rating</label>
+      <select id="rating" required>
+        <option value="" disabled selected>Select stars</option>
+        <option value="5">5 – Excellent</option>
+        <option value="4">4 – Very Good</option>
+        <option value="3">3 – Good</option>
+        <option value="2">2 – Fair</option>
+        <option value="1">1 – Poor</option>
+      </select>
+
+      <button type="submit">Add Testimonial</button>
+    </form>
+
+    <!-- ===== LIST ===== -->
+    <div id="testimonialList"></div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
