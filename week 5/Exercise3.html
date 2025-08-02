@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery UI Survey</title>
+    <!-- jQuery UI CSS -->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <!-- jQuery and jQuery UI -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .form-section {
+        margin-bottom: 30px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+
+      /* Selectable radio buttons styling */
+      #selectable-enrollment {
+        list-style-type: none;
+        padding: 0;
+      }
+      #selectable-enrollment li {
+        margin: 5px;
+        padding: 10px;
+        background: #f8f8f8;
+        border: 1px solid #ddd;
+        cursor: pointer;
+      }
+      #selectable-enrollment li.ui-selected {
+        background: orange;
+        color: white;
+      }
+
+      /* Sortable color ranking styling */
+      #sortable-colors {
+        list-style-type: none;
+        padding: 0;
+      }
+      #sortable-colors li {
+        margin: 5px;
+        padding: 10px;
+        background: #f8f8f8;
+        border: 1px solid #ddd;
+        cursor: move;
+      }
+      .color-swatch {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        vertical-align: middle;
+        border: 1px solid #999;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>jQuery UI Survey</h1>
+
+    <div class="form-section">
+      <h2>General Information</h2>
+
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" class="form-control" />
+      </div>
+      <br />
+
+      <div class="form-group">
+        <label for="date">Date:</label>
+        <input type="text" id="date" class="form-control" />
+      </div>
+    </div>
+
+    <div class="form-section">
+      <h2>Enrollment Status</h2>
+      <p>Are you enrolled as an undergraduate or a graduate?</p>
+
+      <input
+        type="radio"
+        name="enrollment"
+        id="undergrad"
+        value="undergrad"
+        style="display: none"
+      />
+      <input
+        type="radio"
+        name="enrollment"
+        id="graduate"
+        value="graduate"
+        style="display: none"
+      />
+
+      <ul id="selectable-enrollment">
+        <li class="ui-widget-content" data-value="undergrad">Undergraduate</li>
+        <li class="ui-widget-content" data-value="graduate">Graduate</li>
+      </ul>
+    </div>
+
+    <div class="form-section">
+      <h2>Color Preferences</h2>
+      <p>
+        Drag the colors below to Rank the colors listed from your most favorite
+        (1) to your least favorite (5). Be sure to only use each ranking once.
+      </p>
+
+      <ul id="sortable-colors">
+        <li class="ui-state-default">
+          <span class="color-swatch" style="background: #ff0000"></span>
+          #ff0000
+        </li>
+        <li class="ui-state-default">
+          <span class="color-swatch" style="background: #0000ff"></span>
+          #0000ff
+        </li>
+        <li class="ui-state-default">
+          <span class="color-swatch" style="background: #ff00b3"></span>
+          #ff00b3
+        </li>
+        <li class="ui-state-default">
+          <span class="color-swatch" style="background: #ded447"></span>
+          #ded447
+        </li>
+        <li class="ui-state-default">
+          <span class="color-swatch" style="background: #125e18"></span>
+          #125e18
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      $(function () {
+        // STEP 1: Initialize datepicker
+        $("#date").datepicker({
+          dateFormat: "mm/dd/yy",
+        });
+
+        // STEP 2: Initialize selectable for enrollment status
+        $("#selectable-enrollment").selectable({
+          selected: function (event, ui) {
+            // Update the hidden radio button when selection changes
+            $("input[name='enrollment']").prop("checked", false);
+            $("#" + $(ui.selected).data("value")).prop("checked", true);
+          },
+        });
+
+        // STEP 3: Initialize sortable for color ranking
+        $("#sortable-colors").sortable();
+        $("#sortable-colors").disableSelection();
+
+        // STEP 4: Initialize tooltips
+        $(document).tooltip({
+          content: function () {
+            var element = $(this);
+
+            // Tooltips for enrollment options
+            if (
+              element.is("#selectable-enrollment li:contains('Undergraduate')")
+            ) {
+              return "Taking 6.813, doesn't have to do RS assignments";
+            }
+            if (element.is("#selectable-enrollment li:contains('Graduate')")) {
+              return "Taking 6.831, required to do RS assignments";
+            }
+
+            // Tooltips for colors
+            if (element.is("#sortable-colors li:contains('#ff0000')")) {
+              return "Red - Primary color";
+            }
+            if (element.is("#sortable-colors li:contains('#0000ff')")) {
+              return "Blue - Primary color";
+            }
+            if (element.is("#sortable-colors li:contains('#ff00b3')")) {
+              return "Hot Pink - Vibrant color";
+            }
+            if (element.is("#sortable-colors li:contains('#ded447')")) {
+              return "Mustard Yellow - Earth tone";
+            }
+            if (element.is("#sortable-colors li:contains('#125e18')")) {
+              return "Dark Green - Nature color";
+            }
+          },
+          position: {
+            my: "left+15 center",
+            at: "right center",
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

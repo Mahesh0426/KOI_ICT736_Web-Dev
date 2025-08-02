@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Color-Changing Cow Poem</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-1.9.0.min.js"></script>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        max-width: 500px;
+        width: 100%;
+        text-align: center;
+      }
+
+      h2 {
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      p {
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 25px;
+      }
+
+      .controls {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
+
+      #input_color {
+        padding: 8px 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+
+      #button_change {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+      }
+
+      #button_change:hover {
+        background-color: #45a049;
+      }
+
+      .cow_color {
+        font-weight: bold;
+        color: #2196f3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2><span class="cow_color">Blue</span> Cow by Gelett Burgess</h2>
+      <p>
+        I never saw a <span class="cow_color">Blue</span> Cow,<br />
+        I never hope to see one; But I can tell you, anyhow, I'd rather see than
+        be one.
+      </p>
+
+      <div class="controls">
+        Change the cow's color to:
+        <input id="input_color" value="Purple" />
+        <button id="button_change">Change!</button>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        // Select the button and attach a click event listener
+        $("#button_change").click(function () {
+          // Get the value from the input field
+          var newColor = $("#input_color").val();
+          $("span.cow_color").text(newColor);
+          // Select all spans with class "cow_color" and replace their text
+          $("span.cow_color").css("color", newColor.toLowerCase());
+        });
+      });
+    </script>
+  </body>
+</html>

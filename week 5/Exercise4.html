@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery AJAX Exercise</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      #div1 {
+        padding: 20px;
+        border: 1px solid #ddd;
+        margin: 20px 0;
+        min-height: 100px;
+      }
+      button {
+        padding: 10px 15px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>jQuery AJAX Methods Demonstration</h1>
+
+    <div id="div1">
+      <h2>Let jQuery AJAX Change this text</h2>
+    </div>
+
+    <button id="loadBtn">Get External Content (load)</button>
+    <button id="getBtn">Get Data ($.get)</button>
+
+    <div id="result"></div>
+
+    <script>
+      $(document).ready(function () {
+        // 1. Using load() method
+        $("#loadBtn").click(function () {
+          $("#div1").load("demo_text.txt", function (response, status, xhr) {
+            if (status == "error") {
+              $("#div1").html(
+                "Error loading content: " + xhr.status + " " + xhr.statusText
+              );
+            }
+          });
+        });
+
+        // 2. Using $.get() method
+        $("#getBtn").click(function () {
+          $.get("demo_text.txt", function (data, status) {
+            $("#result").html("<h3>GET Response:</h3>" + data);
+          }).fail(function () {
+            $("#result").html("<h3>Error in GET request</h3>");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
